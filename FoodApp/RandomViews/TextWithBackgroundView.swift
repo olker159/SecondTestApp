@@ -10,6 +10,9 @@ import SwiftUI
 struct TextWithBackgroundView: View {
     
     @StateObject var jokeViewModel = JokeViewModel()
+    
+    @Environment(\.colorScheme) var colorScheme
+    
     var text: String
     
     var body: some View {
@@ -20,6 +23,7 @@ struct TextWithBackgroundView: View {
 """)
             .padding(20)
             .background(Rectangle().foregroundColor(Color("TabColor")).frame(maxWidth: 375, minHeight: 148, idealHeight: 168).shadow(radius: 3).cornerRadius(25))
+            .foregroundColor(colorScheme == .dark ? Color(.black) : Color(.black))
             
 
             

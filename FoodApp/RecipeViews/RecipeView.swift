@@ -14,7 +14,7 @@ struct RecipeView: View {
     var body: some View {
         
         VStack(){
-            SearchBar()
+            //SearchBar()
             
             Spacer()
             
