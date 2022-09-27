@@ -23,7 +23,7 @@ struct TextWithBackgroundView: View {
 """)
             .padding(20)
             .background(Rectangle().foregroundColor(Color("TabColor")).frame(maxWidth: 375, minHeight: 148, idealHeight: 168).shadow(radius: 3).cornerRadius(25))
-            .foregroundColor(colorScheme == .dark ? Color(.black) : Color(.black))
+            .foregroundColor(Color(.black))
             
 
             
