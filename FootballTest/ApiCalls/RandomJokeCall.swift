@@ -20,7 +20,7 @@ class JokeViewModel: ObservableObject{
     func fetchRandomJoke(){
         
         let headers = [
-            "X-RapidAPI-Key": "41b3ea560cmsh559d6da4a23e211p1ac346jsnf1a85f6123ee",
+            "X-RapidAPI-Key": "API KEY FROM RAPIDAPI.COM",
             "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
         ]
         
