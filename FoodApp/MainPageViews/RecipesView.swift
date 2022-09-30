@@ -23,7 +23,7 @@ struct RecipesView: View {
                     Button {
                         textTest = searchText
                     } label: {
-                        Text("Button")
+                        Text("Search")
                             .foregroundColor(.black)
                             .frame(width: 75, height: 37)
                             .background(Color("TabColor"))
@@ -33,14 +33,25 @@ struct RecipesView: View {
                     }
 
                 }.padding(.top,10)
-                Spacer()
                 
-                Text("---> \(textTest)")
+                
+                Text("Suggested recipes")
+                    .font(.title2)
+                    .fontWeight(.heavy)
+                    .padding(.top, 15)
                 
                 Spacer()
                 
             }
-            .navigationTitle("Search for recipes")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text("Search for recipes")
+                        .font(.largeTitle.bold())
+                        .accessibilityAddTraits(.isHeader)
+                        
+                }
+            }
             
             
         }

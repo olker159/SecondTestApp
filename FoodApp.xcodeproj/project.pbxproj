@@ -29,6 +29,7 @@
 		A77962BF28CA80B700CBA60C /* RoundedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77962BE28CA80B700CBA60C /* RoundedShape.swift */; };
 		A79BCB3428D1E9CE00972335 /* RandomJokeCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79BCB3328D1E9CE00972335 /* RandomJokeCall.swift */; };
 		A79BCB3628D2092600972335 /* RandomRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79BCB3528D2092600972335 /* RandomRecipeView.swift */; };
+		A7E9E76028E4446400BD252E /* ListedSingleRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E9E75F28E4446400BD252E /* ListedSingleRecipeView.swift */; };
 		A7ED493B28D4B9D300910966 /* RandomRecipeCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ED493A28D4B9D300910966 /* RandomRecipeCall.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		A77962BE28CA80B700CBA60C /* RoundedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShape.swift; sourceTree = "<group>"; };
 		A79BCB3328D1E9CE00972335 /* RandomJokeCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomJokeCall.swift; sourceTree = "<group>"; };
 		A79BCB3528D2092600972335 /* RandomRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomRecipeView.swift; sourceTree = "<group>"; };
+		A7E9E75F28E4446400BD252E /* ListedSingleRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListedSingleRecipeView.swift; sourceTree = "<group>"; };
 		A7ED493A28D4B9D300910966 /* RandomRecipeCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomRecipeCall.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				A71D0D2E28DDB1CB0017E222 /* RecipeView.swift */,
+				A7E9E75F28E4446400BD252E /* ListedSingleRecipeView.swift */,
 			);
 			path = RecipeViews;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				A70F02E828C8B833001A27DB /* CustomInputField.swift in Sources */,
 				A79BCB3628D2092600972335 /* RandomRecipeView.swift in Sources */,
 				A70364F528CB477200266FFA /* RecipesView.swift in Sources */,
+				A7E9E76028E4446400BD252E /* ListedSingleRecipeView.swift in Sources */,
 				A70364F928CB859900266FFA /* ApiCall.swift in Sources */,
 				A70957D328D3807300844181 /* RandomRecipeIngredientView.swift in Sources */,
 				A71D0D3128DE01FB0017E222 /* SearchRecipeCall.swift in Sources */,
@@ -388,6 +392,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FoodApp/Preview Content\"";
@@ -418,6 +423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FoodApp/Preview Content\"";

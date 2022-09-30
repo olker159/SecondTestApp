@@ -22,7 +22,7 @@ struct RandomRecipeIngredientView: View {
             
             HStack {
                 
-                AsyncImage(url: URL(string: image)) { item in
+                /*AsyncImage(url: URL(string: image)) { item in
                     item.resizable()
                     item.scaledToFit()
                 } placeholder: {
@@ -34,10 +34,10 @@ struct RandomRecipeIngredientView: View {
                             .zIndex(1)
                         Color("TabColor")
                     }
-                }
-                /*Image("almonds")
+                }*/
+                Image("almonds")
                     .resizable()
-                    .scaledToFit()*/
+                    .scaledToFit()
                 .cornerRadius(15)
                 .frame(width: 200, height: 130)
                 .zIndex(1)
@@ -47,22 +47,28 @@ struct RandomRecipeIngredientView: View {
                 VStack{
                     
                     Text("Name: \(name)")
+                        .font(.subheadline)
+                        .fontWeight(.bold)
                     Text("Amount: \(amount,specifier: "%.2f")")
+                        .font(.subheadline)
+                        .fontWeight(.bold)
                     if amount > 1 {
                         Text("Unit: \(unit)")
+                            .font(.subheadline)
+                            .fontWeight(.bold)
                     }else{
                         Text("Unit: \(unitLong)")
+                            .font(.subheadline)
+                            .fontWeight(.bold)
                     }
                     
                     
-                }
+                }.frame(maxWidth: 120)
                 .background(Color("TabColor").frame(width: 180,height: 130).cornerRadius(15))
                     .padding(.trailing)
                 
                 
             }
-        }.onAppear{
-
         }
     }
 }
