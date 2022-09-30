@@ -20,15 +20,18 @@ struct RecipesView: View {
                     SearchBar(text: $searchText)
                         .autocorrectionDisabled(true)
                         .padding(.leading,5)
+                        .padding(.top,15)
                     Button {
                         textTest = searchText
                     } label: {
                         Text("Search")
+                            .fontWeight(.medium)
                             .foregroundColor(.black)
                             .frame(width: 75, height: 37)
                             .background(Color("TabColor"))
                             .cornerRadius(12)
                             .padding(.trailing,5)
+                            .padding(.top,15)
                             
                     }
 
@@ -39,6 +42,8 @@ struct RecipesView: View {
                     .font(.title2)
                     .fontWeight(.heavy)
                     .padding(.top, 15)
+                
+                GridRecipesView()
                 
                 Spacer()
                 
