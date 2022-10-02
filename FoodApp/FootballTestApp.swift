@@ -16,7 +16,7 @@ struct FootballTestApp: App {
     var body: some Scene {
         WindowGroup {
             
-            RecipesView()
+            MainView()
                 .onAppear{
                     
                 }

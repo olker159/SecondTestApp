@@ -22,7 +22,7 @@ struct RandomRecipeIngredientView: View {
             
             HStack {
                 
-                /*AsyncImage(url: URL(string: image)) { item in
+                AsyncImage(url: URL(string: image)) { item in
                     item.resizable()
                     item.scaledToFit()
                 } placeholder: {
@@ -34,10 +34,10 @@ struct RandomRecipeIngredientView: View {
                             .zIndex(1)
                         Color("TabColor")
                     }
-                }*/
-                Image("almonds")
+                }
+                /*Image("almonds")
                     .resizable()
-                    .scaledToFit()
+                    .scaledToFit()*/
                 .cornerRadius(15)
                 .frame(width: 200, height: 130)
                 .zIndex(1)

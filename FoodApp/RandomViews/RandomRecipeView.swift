@@ -106,7 +106,7 @@ struct RandomRecipeView: View {
                     
                     ForEach(randomRecipeViewModel.tryDataRandomRecipe.recipes.first!.extendedIngredients, id: \.id) { item in
                         
-                        RandomRecipeIngredientView(image: item.image, name: item.name, amount: item.amount, unit: item.unit, unitLong: "")
+                        RandomRecipeIngredientView(image: item.image!, name: item.name, amount: item.amount, unit: item.unit, unitLong: "")
                             .padding(.trailing)
                         
                         

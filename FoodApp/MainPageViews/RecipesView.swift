@@ -12,6 +12,10 @@ struct RecipesView: View {
     @State var searchText = ""
     @State var textTest = ""
     
+    @FocusState private var searchFocus: Bool
+    
+    @StateObject var randomRecipeViewModel = RandomRecipeViewModel()
+    
     var body: some View {
         
         NavigationView {
@@ -21,8 +25,10 @@ struct RecipesView: View {
                         .autocorrectionDisabled(true)
                         .padding(.leading,5)
                         .padding(.top,15)
+                        .focused($searchFocus)
                     Button {
                         textTest = searchText
+                        searchFocus = false
                     } label: {
                         Text("Search")
                             .fontWeight(.medium)
@@ -44,6 +50,9 @@ struct RecipesView: View {
                     .padding(.top, 15)
                 
                 GridRecipesView()
+                    .onAppear{
+                        
+                    }
                 
                 Spacer()
                 

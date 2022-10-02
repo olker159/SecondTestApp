@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ListedSingleRecipeView: View {
     
+    @StateObject var randomRecipeViewModel = RandomRecipeViewModel()
+    
     var body: some View {
         ZStack{
             VStack{
@@ -20,7 +22,8 @@ struct ListedSingleRecipeView: View {
                     .zIndex(1)
                 
                 VStack {
-                    Text("Dijon Garlic Brussels Sprouts")
+                    Text("Title")
+                        .foregroundColor(.black)
                         .fontWeight(.bold)
                         .lineLimit(4)
                         .multilineTextAlignment(.center)
