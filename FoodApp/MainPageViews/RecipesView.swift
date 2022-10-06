@@ -26,18 +26,25 @@ struct RecipesView: View {
                         .padding(.leading,5)
                         .padding(.top,15)
                         .focused($searchFocus)
-                    Button {
-                        textTest = searchText
-                        searchFocus = false
+                    NavigationLink {
+                        SearchedListView()
                     } label: {
-                        Text("Search")
-                            .fontWeight(.medium)
-                            .foregroundColor(.black)
-                            .frame(width: 75, height: 37)
-                            .background(Color("TabColor"))
-                            .cornerRadius(12)
-                            .padding(.trailing,5)
-                            .padding(.top,15)
+                        Button {
+                            textTest = searchText
+                            searchFocus = false
+                            
+                        } label: {
+                            Text("Search")
+                                .fontWeight(.medium)
+                                .foregroundColor(.black)
+                                .frame(width: 75, height: 37)
+                                .background(Color("TabColor"))
+                                .cornerRadius(12)
+                                .padding(.trailing,5)
+                                .padding(.top,15)
+                    }
+
+                    
                             
                     }
 

@@ -10,6 +10,7 @@ import SwiftUI
 struct MainView: View {
     
     @StateObject var randomRecipeViewModel = RandomRecipeViewModel()
+    @StateObject var randomRecipeGridViewModel = RandomRecipeGridViewModel()
     
     var body: some View {
         

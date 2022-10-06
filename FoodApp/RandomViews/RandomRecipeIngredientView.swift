@@ -29,7 +29,8 @@ struct RandomRecipeIngredientView: View {
                     ZStack {
                         Image(systemName: "questionmark.folder")
                             .resizable()
-                            .scaledToFit().frame(width: 30, height: 30)
+                            .scaledToFit()
+                            .frame(width: 30, height: 30)
                             .foregroundColor(.gray)
                             .zIndex(1)
                         Color("TabColor")

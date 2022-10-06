@@ -10,6 +10,7 @@ import SwiftUI
 struct GridRecipesView: View {
     
     @StateObject var randomRecipeViewModel = RandomRecipeViewModel()
+    @StateObject var randomRecipeGridViewModel = RandomRecipeGridViewModel()
     
     private let adaptiveColumns = [
         GridItem(.adaptive(minimum: 170))
@@ -20,11 +21,16 @@ struct GridRecipesView: View {
         NavigationView{
             ScrollView{
                 LazyVGrid(columns: adaptiveColumns, spacing: 50) {
-                    ForEach(1 ... 10, id: \.self) {_ in
-                        ListedSingleRecipeView()
+                    ForEach(randomRecipeGridViewModel.tryDataRandomRecipeGrid.recipes) { item in
+                        NavigationLink {
+                            EmptyView()
+                        } label: {
+                            ListedSingleRecipeView(image: item.image, title: item.title)
+                        }
+
                     }
                 }
-            }
+            }.onAppear{randomRecipeGridViewModel.fetchRandomRecipe()}
         }
         
     }
