@@ -18,11 +18,15 @@ struct SearchedListView: View {
         NavigationView {
             List{
                 ForEach(searchedRecipe.searchRecipeData.results){ item in
-                    Text(item.title)
+                    SingleSearchedRecipe(title: item.title, image: item.image)
+                        .listRowSeparator(.hidden)
                 }
             }.navigationTitle("Results")
-        }.onAppear{
+        }
+        .onAppear{
             searchedRecipe.fetchRecipe(query: query)
+            UITableView.appearance().separatorStyle = .none
+            print("IMAGE", searchedRecipe.searchRecipeData.results.first!.image)
         }
     }
 }
