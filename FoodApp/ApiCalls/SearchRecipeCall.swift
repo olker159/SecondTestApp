@@ -7,23 +7,48 @@
 
 import Foundation
 
-struct Result: Codable {
-    let asd: String
+
+struct SearchResult: Codable {
+  let results: [Result]
+  let baseUri: String
+  let offset: Int
+  let number: Int
+  let totalResults: Int
+  let processingTimeMs: Int
 }
 
+extension SearchResult {
+  struct Result: Codable, Identifiable {
+    let id: Int
+    let title: String
+    let readyInMinutes: Int
+    let servings: Int
+    let sourceURL: String
+    let image: String
+
+    private enum CodingKeys: String, CodingKey {
+      case id
+      case title
+      case readyInMinutes
+      case servings
+      case sourceURL = "sourceUrl"
+      case image
+    }
+  }
+}
 
 class SearchRecipeViewModel: ObservableObject {
     
-    @Published var searchRecipeData = Result(asd: "")
+    @Published var searchRecipeData = SearchResult(results: [SearchResult.Result(id: 0, title: "", readyInMinutes: 0, servings: 0, sourceURL: "", image: "")], baseUri: "", offset: 0, number: 0, totalResults: 0, processingTimeMs: 0)
     
     
-    func fetchRecipe(){
+    func fetchRecipe(query: String){
         let headers = [
             "X-RapidAPI-Key": "API KEY FROM RAPIDAPI.COM",
             "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
         ]
 
-        let request = NSMutableURLRequest(url: NSURL(string: "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?query=burger&diet=vegetarian&excludeIngredients=coconut&intolerances=egg%2C%20gluten&number=10&offset=0&type=main%20course")! as URL,
+        let request = NSMutableURLRequest(url: NSURL(string: "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?query=\(query)&number=10&offset=0")! as URL,
                                                 cachePolicy: .useProtocolCachePolicy,
                                             timeoutInterval: 10.0)
         request.httpMethod = "GET"
@@ -36,7 +61,7 @@ class SearchRecipeViewModel: ObservableObject {
             } else {
                 do {
                     //print(data)
-                    let searchRecipeData = try JSONDecoder().decode(Result.self, from: data!)
+                    let searchRecipeData = try JSONDecoder().decode(SearchResult.self, from: data!)
                     OperationQueue.main.addOperation {
                         self.searchRecipeData = searchRecipeData
                         //print(tryDataRandomRecipe.recipes.first!.extendedIngredients.first!.id)

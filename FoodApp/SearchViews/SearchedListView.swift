@@ -8,20 +8,27 @@
 import SwiftUI
 
 struct SearchedListView: View {
+    
+    @StateObject var searchedRecipe = SearchRecipeViewModel()
+    
+    var query: String
+    
     var body: some View {
     
         NavigationView {
             List{
-                ForEach(1...10 , id: \.self){_ in
-                    Text("aha aha aha")
+                ForEach(searchedRecipe.searchRecipeData.results){ item in
+                    Text(item.title)
                 }
             }.navigationTitle("Results")
+        }.onAppear{
+            searchedRecipe.fetchRecipe(query: query)
         }
     }
 }
 
 struct SearchedListView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchedListView()
+        SearchedListView(query: "")
     }
 }

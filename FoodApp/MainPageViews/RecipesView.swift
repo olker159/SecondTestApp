@@ -11,10 +11,11 @@ struct RecipesView: View {
     
     @State var searchText = ""
     @State var textTest = ""
+    //@State var isClicked: Bool = false
     
     @FocusState private var searchFocus: Bool
-    
     @StateObject var randomRecipeViewModel = RandomRecipeViewModel()
+    @State private var buttonOpacity = 1.0
     
     var body: some View {
         
@@ -26,13 +27,10 @@ struct RecipesView: View {
                         .padding(.leading,5)
                         .padding(.top,15)
                         .focused($searchFocus)
-                    NavigationLink {
-                        SearchedListView()
-                    } label: {
-                        Button {
-                            textTest = searchText
-                            searchFocus = false
-                            
+                    
+                    
+                        NavigationLink {
+                            SearchedListView(query: searchText)
                         } label: {
                             Text("Search")
                                 .fontWeight(.medium)
@@ -42,14 +40,24 @@ struct RecipesView: View {
                                 .cornerRadius(12)
                                 .padding(.trailing,5)
                                 .padding(.top,15)
-                    }
-
-                    
-                            
-                    }
-
+                        }
+                        
+                   /* Button {
+                        textTest = searchText
+                        searchFocus = false
+                        isClicked = true
+                        
+                    } label: {
+                        Text("Search")
+                            .fontWeight(.medium)
+                            .foregroundColor(.black)
+                            .frame(width: 75, height: 37)
+                            .background(Color("TabColor"))
+                            .cornerRadius(12)
+                            .padding(.trailing,5)
+                            .padding(.top,15)
+                    }*/
                 }.padding(.top,10)
-                
                 
                 Text("Suggested recipes")
                     .font(.title2)
@@ -70,7 +78,7 @@ struct RecipesView: View {
                     Text("Search for recipes")
                         .font(.largeTitle.bold())
                         .accessibilityAddTraits(.isHeader)
-                        
+                    
                 }
             }
             
