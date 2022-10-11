@@ -32,12 +32,12 @@ struct MainView: View {
                         Image(systemName: "fork.knife")
                     }
                 }
-            IngredientsView()
+            WinePairingView()
                 .tabItem{
                     Label {
-                        Text("Ingredients")
+                        Text("Wines")
                     } icon: {
-                        Image(systemName: "carrot")
+                        Image(systemName: "wineglass.fill")
                     }
                     
                 }

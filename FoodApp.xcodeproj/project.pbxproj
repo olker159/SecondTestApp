@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A70364F528CB477200266FFA /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70364F428CB477200266FFA /* RecipesView.swift */; };
-		A70364F728CB47E500266FFA /* IngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70364F628CB47E500266FFA /* IngredientsView.swift */; };
+		A70364F728CB47E500266FFA /* WinePairingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70364F628CB47E500266FFA /* WinePairingView.swift */; };
 		A70364F928CB859900266FFA /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70364F828CB859900266FFA /* ApiCall.swift */; };
 		A70957D328D3807300844181 /* RandomRecipeIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70957D228D3807300844181 /* RandomRecipeIngredientView.swift */; };
 		A70F02D828C7A117001A27DB /* FootballTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70F02D728C7A117001A27DB /* FootballTestApp.swift */; };
@@ -36,11 +36,12 @@
 		A7D6F11D28ECEB33004C848F /* RandomRecipeGridCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D6F11C28ECEB33004C848F /* RandomRecipeGridCall.swift */; };
 		A7E9E76028E4446400BD252E /* ListedSingleRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E9E75F28E4446400BD252E /* ListedSingleRecipeView.swift */; };
 		A7ED493B28D4B9D300910966 /* RandomRecipeCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ED493A28D4B9D300910966 /* RandomRecipeCall.swift */; };
+		A7EDA94928F5D3D700CAB528 /* WinePairingCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EDA94828F5D3D700CAB528 /* WinePairingCall.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A70364F428CB477200266FFA /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
-		A70364F628CB47E500266FFA /* IngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsView.swift; sourceTree = "<group>"; };
+		A70364F628CB47E500266FFA /* WinePairingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinePairingView.swift; sourceTree = "<group>"; };
 		A70364F828CB859900266FFA /* ApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
 		A70957D228D3807300844181 /* RandomRecipeIngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomRecipeIngredientView.swift; sourceTree = "<group>"; };
 		A70F02D428C7A117001A27DB /* FoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +70,7 @@
 		A7D6F11C28ECEB33004C848F /* RandomRecipeGridCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomRecipeGridCall.swift; sourceTree = "<group>"; };
 		A7E9E75F28E4446400BD252E /* ListedSingleRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListedSingleRecipeView.swift; sourceTree = "<group>"; };
 		A7ED493A28D4B9D300910966 /* RandomRecipeCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomRecipeCall.swift; sourceTree = "<group>"; };
+		A7EDA94828F5D3D700CAB528 /* WinePairingCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinePairingCall.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +141,7 @@
 			children = (
 				A70F02D928C7A117001A27DB /* ContentView.swift */,
 				A70364F428CB477200266FFA /* RecipesView.swift */,
-				A70364F628CB47E500266FFA /* IngredientsView.swift */,
+				A70364F628CB47E500266FFA /* WinePairingView.swift */,
 			);
 			path = MainPageViews;
 			sourceTree = "<group>";
@@ -174,6 +176,7 @@
 				A7ED493A28D4B9D300910966 /* RandomRecipeCall.swift */,
 				A71D0D3028DE01FB0017E222 /* SearchRecipeCall.swift */,
 				A7D6F11C28ECEB33004C848F /* RandomRecipeGridCall.swift */,
+				A7EDA94828F5D3D700CAB528 /* WinePairingCall.swift */,
 			);
 			path = ApiCalls;
 			sourceTree = "<group>";
@@ -268,7 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A70364F728CB47E500266FFA /* IngredientsView.swift in Sources */,
+				A70364F728CB47E500266FFA /* WinePairingView.swift in Sources */,
 				A79BCB3428D1E9CE00972335 /* RandomJokeCall.swift in Sources */,
 				A73336D828D0E15500D031AA /* MainView.swift in Sources */,
 				A70F02EC28C8D7FC001A27DB /* CustomPasswordField.swift in Sources */,
@@ -276,6 +279,7 @@
 				A79BCB3628D2092600972335 /* RandomRecipeView.swift in Sources */,
 				A70364F528CB477200266FFA /* RecipesView.swift in Sources */,
 				A7E9E76028E4446400BD252E /* ListedSingleRecipeView.swift in Sources */,
+				A7EDA94928F5D3D700CAB528 /* WinePairingCall.swift in Sources */,
 				A7D6F11D28ECEB33004C848F /* RandomRecipeGridCall.swift in Sources */,
 				A70364F928CB859900266FFA /* ApiCall.swift in Sources */,
 				A7D0BCAA28EE3A3A00AD3AC9 /* SearchedListView.swift in Sources */,

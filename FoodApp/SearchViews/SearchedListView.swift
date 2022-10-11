@@ -26,7 +26,6 @@ struct SearchedListView: View {
         .onAppear{
             searchedRecipe.fetchRecipe(query: query)
             UITableView.appearance().separatorStyle = .none
-            print("IMAGE", searchedRecipe.searchRecipeData.results.first!.image)
         }
     }
 }
